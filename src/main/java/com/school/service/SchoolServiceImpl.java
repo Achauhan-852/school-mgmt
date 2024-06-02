@@ -24,4 +24,16 @@ public class SchoolServiceImpl implements SchoolService{
         School s = schoolRepo.save(school);
         return new ApiRes("Saved Successfully", s.getId());
     }
+
+    @Override
+    public ApiRes updateSchool(School school) {
+        schoolRepo.save(school);
+        return new ApiRes("Updated Successfully", school.getId());
+    }
+
+    @Override
+    public ApiRes deleteSchool(Long id) {
+        schoolRepo.delete(schoolRepo.getReferenceById(id));
+        return  new ApiRes("Deleted Successfully", id);
+    }
 }

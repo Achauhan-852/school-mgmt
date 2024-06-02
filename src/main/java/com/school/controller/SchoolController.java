@@ -31,4 +31,15 @@ public class SchoolController {
         return schoolService.saveSchool(school);
 
     }
+
+
+    @PutMapping("update-school")
+    public ApiRes updateSchool(School school){
+        return schoolService.updateSchool(school);
+    }
+
+    @DeleteMapping("delete-school")
+    public ApiRes deleteSchool(@RequestParam(required = true) Long id){
+        return schoolService.deleteSchool(id);
+    }
 }

@@ -9,4 +9,8 @@ public interface SchoolService {
     List<School> getAllSchools();
 
     ApiRes saveSchool(School school);
+
+    ApiRes updateSchool(School school);
+
+    ApiRes deleteSchool(Long id);
 }
